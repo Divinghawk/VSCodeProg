@@ -1,11 +1,8 @@
 import * as assert from 'assert';
-import 'chai/register-expect'; 
+/* import 'chai/register-expect';  */
 import {remainingMinutesInOven} from '../Task2_methodes/Lasagna.js';
 import {preparationTimeInMinutes} from '../Task2_methodes/Lasagna.js';
 import {totalTimeInMinutes} from '../Task2_methodes/Lasagna.js';
-
-/* const lasagna = new Lasagna();
-lasagna.EXPECTED_MINUTES_IN_OVEN = 40;  */
 
 describe('remainingMinutesInOven', () => {
   describe('Test', function () {
