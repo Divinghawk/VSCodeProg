@@ -1,0 +1,29 @@
+// Today I completed the ‘Resistor Color Trio’ TypeScript exercise on Exercism. 
+// This exercise asks us to write a TypeScript function that takes two color names (e.g. ‘brown’ and ‘black’) and a power-of-ten multiplier color 
+// (e.g. ‘black’), returning the electrical resistance they would produce in string format (‘10 ohms’ in this example).
+
+const colorMap = [
+  "black",
+  "brown",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "violet",
+  "grey",
+  "white"
+];
+
+export const decodedResistorValue = ([first, second, zeros]: Array<string>): string => {
+  const baseValue = `${colorMap.indexOf(first)}${colorMap.indexOf(second)}`
+
+  let value = Number(baseValue) * 10 ** colorMap.indexOf(zeros)
+  let unit = 'ohms'
+  if(value >= 1000) {
+    value /= 1000
+    unit = `kilo${unit}`
+  }
+
+  return `${value} ${unit}`
+};
